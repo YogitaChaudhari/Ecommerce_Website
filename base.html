@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>E-commerce Website</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'shop-homepage.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    {% include 'navbar.html' %}
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <!-- My side bar -->
+            <div class="col-lg-3">
+
+                {% include 'sidebar.html' %}
+
+            </div>
+            <!-- /.col-lg-3 -->
+            <div class="col-lg-9">
+
+                <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
+                    {% include 'slidingIMG.html' %}
+                </div>
+
+                <div class="row">
+                    <!-- This is the Body of the page -->
+                    {%block yogita%}{%endblock%}
+                    <!-- Body of the page Ends here -->
+                </div>
+                <!-- /.row -->
+
+            </div>
+            <!-- /.col-lg-9 -->
+
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Yogita Chaudhari 2020</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script> -->
+    <!-- <script src="{% static 'jquery.min.js' %}"></script> -->
+    <script src="{% static 'bootstrap.bundle.min.js' %}"></script>
+
+</body>
+
+</html>
